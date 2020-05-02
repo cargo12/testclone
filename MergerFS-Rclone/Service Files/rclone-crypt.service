@@ -9,7 +9,7 @@ Type=notify
 Environment=RCLONE_CONFIG=/usr/bin/rclone/rclone.conf
 KillMode=none
 RestartSec=5
-ExecStart=/usr/bin/rclone mount gcrypt: /xxxxx/yyyyy/gdrive/Gcrypt \
+ExecStart=/xxxxx/yyyyy/bin/rclone mount gcrypt: /xxxxx/yyyyy/gdrive/Gcrypt \
 --allow-other \
 --attr-timeout 1000h \
 --buffer-size 128M \
