@@ -1,7 +1,8 @@
 [Unit]
 Description=RClone Crypt Service
-Wants=network-online.target
-After=network-online.target
+After=rclone-vfs.service
+RequiresMountsFor=/xxxxx/yyyyy/gdrive/Local
+RequiresMountsFor=/xxxxx/yyyyy/gdrive/Mount
 
 [Service]
 Type=notify
@@ -23,8 +24,6 @@ ExecStart=/usr/bin/rclone mount gcrypt: /xxxxx/yyyyy/gdrive/Gcrypt \
 --rc-addr 127.0.0.1:5572
 ExecStop=/bin/fusermount -uz /xxxxx/yyyyy/gdrive/Gcrypt
 Restart=on-failure
-User=yyyyy
-Group=yyyyy
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
