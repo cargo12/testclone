@@ -8,10 +8,9 @@ Type=notify
 KillMode=none
 Environment=GOMAXPROCS=2
 
-ExecStart=/homexx/yyyyy/bin/rclone mount gdrive: /homexx/yyyyy/Stuff/Mount \
-  --allow-other \
+ExecStart=/xxxxx/yyyyy/bin/rclone mount gdrive: /xxxxx/yyyyy/gdrive/Mount \
   --user-agent='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.92 Safari/537.36' \
-  --config /homexx/yyyyy/.config/rclone/rclone.conf \
+  --config /xxxxx/yyyyy/.config/rclone/rclone.conf \
   --use-mmap \
   --dir-cache-time 168h \
   --timeout 1h \
@@ -22,7 +21,7 @@ ExecStart=/homexx/yyyyy/bin/rclone mount gdrive: /homexx/yyyyy/Stuff/Mount \
   --vfs-read-chunk-size-limit 2048M \
   --tpslimit 10 \
   --tpslimit-burst 10
-ExecStop=/bin/fusermount -uz /homexx/yyyyy/Stuff/Mount
+ExecStop=/bin/fusermount -uz /xxxxx/yyyyy/gdrive/Mount
 Restart=on-failure
 
 [Install]
