@@ -1,0 +1,22 @@
+[gdrive]
+type = drive
+client_id = 508335166758-v68hep37pl8bcsqmibi2hn65dtpsmf89.apps.googleusercontent.com
+client_secret = lhjmUg6W_QjPLsNmvxwcJYR1
+scope = drive
+token = {"access_token":"ya29.a0Ae4lvC2qBU7JUiSif5ZM_X7kyp20KvODu7dSmxeXBN5BErTwSut8hNKDVicso3NgkbvWKRiKLNASFjlKDIdv9a8RvZk2xvjGSRo2FWA3CtnkesLKcMQDlW1Ni9FR1KnHVWLA6y6tvitvn71wR54F-Ua2pBI2_C-3PezR","token_type":"Bearer","refresh_token":"1//0f27o_9QTXDyKCgYIARAAGA8SNwF-L9Irjk5t8j_uiHwOaxiQJoilEAHREB8tGIyqNZxoPRweS3bBGQgfKM2nndiE4KPXNfagBgU","expiry":"2020-04-28T07:47:05.680985982Z"}
+team_drive = 0AGEmOci7ap_8Uk9PVA
+
+[gcache]
+type = cache
+remote = gdrive:/gdrive
+chunk_size = 10M
+info_age = 2d
+chunk_total_size = 10G
+
+[gcrypt]
+type = crypt
+remote = gcache:/crypt
+filename_encryption = obfuscate
+directory_name_encryption = true
+password = PJNKIYPLnpasNh09yGoSfHjlUs_R1mp4g4Y
+password2 = MdRSX94A8HyUSG9j_dugXiQ1l0b__n3XdRs
