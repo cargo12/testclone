@@ -6,7 +6,7 @@ RequiresMountsFor=/xxxxx/yyyyy/gdrive/Mount
 
 [Service]
 Type=notify
-Environment=RCLONE_CONFIG=/usr/bin/rclone/rclone.conf
+Environment=RCLONE_CONFIG=/.config/rclone/rclone.conf
 KillMode=none
 RestartSec=5
 ExecStartPre=/bin/mkdir -p /xxxxx/yyyyy/gdrive/Grypt \
