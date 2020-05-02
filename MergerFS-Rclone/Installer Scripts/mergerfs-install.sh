@@ -13,6 +13,8 @@ else
     dpkg -x "$HOME"/tmp/mergerfs.deb "$HOME"/tmp
     mv "$HOME"/tmp/usr/bin/* "$HOME"/bin
     rm -rf "$HOME"/tmp
+    source ~/.bashrc
+    source ~/.profile
     command -v mergerfs
     mergerfs -v
     exit
