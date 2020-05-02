@@ -9,7 +9,7 @@ Type=notify
 Environment=RCLONE_CONFIG=/.config/rclone/rclone.conf
 KillMode=none
 RestartSec=5
-ExecStartPre=/bin/mkdir -p /xxxxx/yyyyy/gdrive/Grypt \
+ExecStartPre=/bin/mkdir -p /xxxxx/yyyyy/gdrive/Gcrypt \
 ExecStart=/xxxxx/yyyyy/bin/rclone mount gcrypt: /xxxxx/yyyyy/gdrive/Gcrypt \
 --allow-other \
 --attr-timeout 1000h \
