@@ -1,0 +1,30 @@
+[Unit]
+Description=RClone Crypt Service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=notify
+Environment=RCLONE_CONFIG=/usr/bin/rclone/rclone.conf
+KillMode=none
+RestartSec=5
+ExecStartPre=/bin/mkdir -p /xxxxx/yyyyy/gdrive/Gcrypt \
+ExecStart=/usr/bin/rclone mount gcrypt: /xxxxx/yyyyy/gdrive/Gcrypt \
+--allow-other \
+--attr-timeout 1000h \
+--buffer-size 128M \
+--dir-cache-time 1000h \
+--log-level INFO \
+--log-file /xxxxx/yyyyy/logs/rclone-crypt.log \
+--poll-interval 15s \
+--timeout 1h \
+--umask 002 \
+--rc \
+--rc-addr 127.0.0.1:5572
+ExecStop=/bin/fusermount -uz /xxxxx/yyyyy/gdrive/Gcrypt
+Restart=on-failure
+User=yyyyy
+Group=yyyyy
+
+[Install]
+WantedBy=multi-user.target
