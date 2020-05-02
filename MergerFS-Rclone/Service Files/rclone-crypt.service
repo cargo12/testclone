@@ -1,3 +1,5 @@
+cat ./rclone-crypt.service
+
 [Unit]
 Description=RClone Crypt Service
 After=rclone-vfs.service
@@ -9,7 +11,6 @@ Type=notify
 Environment=RCLONE_CONFIG=/usr/bin/rclone/rclone.conf
 KillMode=none
 RestartSec=5
-ExecStartPre=/bin/mkdir -p /xxxxx/yyyyy/gdrive/Gcrypt \
 ExecStart=/usr/bin/rclone mount gcrypt: /xxxxx/yyyyy/gdrive/Gcrypt \
 --allow-other \
 --attr-timeout 1000h \
