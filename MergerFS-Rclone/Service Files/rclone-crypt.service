@@ -1,5 +1,3 @@
-cat ./rclone-crypt.service
-
 [Unit]
 Description=RClone Crypt Service
 After=rclone-vfs.service
@@ -27,4 +25,4 @@ ExecStop=/bin/fusermount -uz /xxxxx/yyyyy/gdrive/Gcrypt
 Restart=on-failure
 
 [Install]
-WantedBy=default.target
+WantedBy=multi-user.target
