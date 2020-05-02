@@ -2,7 +2,7 @@
 Description=MergerFS Mount
 After=rclone-vfs.service
 RequiresMountsFor=/xxxxx/yyyyy/gdrive/Local
-RequiresMountsFor=/homexx/yyyyy/gdrive/Mount
+RequiresMountsFor=/xxxxx/yyyyy/gdrive/Mount
 
 [Service]
 Type=forking
